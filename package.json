@@ -1,0 +1,17 @@
+{
+  "name": "tbic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "robbie0630",
+  "license": "AGPL-3.0-or-later",
+  "dependencies": {
+    "dotenv": "^6.1.0",
+    "escape-html": "^1.0.3",
+    "socket.io": "^2.1.1",
+    "sqlite3": "^4.0.4"
+  }
+}
