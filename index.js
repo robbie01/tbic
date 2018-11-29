@@ -45,7 +45,7 @@ io.on('connection', sock => {
     })
   }
 
-  const onJoin = cb => {
+  const onJoin = (nick, color) => {
     sock.join('lobby', () => {
       sock.on('user joined', onUserUpdate)
       sock.on('message', onMessage)
@@ -54,13 +54,11 @@ io.on('connection', sock => {
         delete users[sock.id]
         io.to('lobby').emit('update users', users)
       })
-      cb()
+      onUserUpdate(nick, color)
     })
   }
 
-  sock.once('user joined', (nick, color) => {
-    onJoin(() => onUserUpdate(nick, color))
-  })
+  sock.once('user joined', onJoin)
 })
 
 serv.listen(PORT, () => {
