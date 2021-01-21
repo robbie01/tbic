@@ -11,7 +11,7 @@
   "dependencies": {
     "dotenv": "^6.1.0",
     "escape-html": "^1.0.3",
-    "socket.io": "^2.1.1",
+    "socket.io": "^2.4.0",
     "sqlite3": "^4.0.4"
   }
 }
